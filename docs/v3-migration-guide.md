@@ -42,7 +42,7 @@ const store = createStore(
   initialState,
 -  compose(
 -    reactReduxFirebase(firebase, rrfConfig), // pass in firebase instance instead of config
-     applyMiddleware([ thunk.withExtraArgument(getFirebase) ]) // to add other middleware
+     applyMiddleware(thunk.withExtraArgument(getFirebase)) // to add other middleware
 -  )
 )
 
